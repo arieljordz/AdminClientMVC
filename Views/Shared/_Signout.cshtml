@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<div id="modal_signout" class="modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-sm pt-5">
+
+        <div class="modal-content">
+            <div class="row" style="display: block;">
+                <div class="card m-0 p-0">
+                    <div class="card-body bg-light-blue p-5">
+                        <div class="d-flex justify-content-center">
+                            <h3>RCBC DPU TELLERLESS PORTAL</h3>
+                        </div>
+                        <section class="p-4 bg-white">
+                            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "formLogin" }))
+                            {
+                                <div class="d-flex justify-content-center">
+                                    <label>We have signed out you due to inactivity.</label>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <label>Please Login again.</label>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-md col-md-12" id="btnProceed">OK</button>
+                                </div>
+                            }
+
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
